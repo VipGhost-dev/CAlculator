@@ -2,6 +2,7 @@ package com.example.myapp;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -31,6 +32,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     Button equals;
     Button minus;
     Button clear;
+    Button next;
 
     String act;
     boolean fnum;
@@ -66,6 +68,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         equals = findViewById(R.id.equals);
         minus = findViewById(R.id.minus);
         clear = findViewById(R.id.clear);
+        next = findViewById(R.id.nextpage);
 
         zero.setOnClickListener(this);
         one.setOnClickListener(this);
@@ -83,6 +86,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         equals.setOnClickListener(this);
         minus.setOnClickListener(this);
         clear.setOnClickListener(this);
+        next.setOnClickListener(this);
     }
 
     @Override
@@ -174,6 +178,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 result.setText("");
                 equal.setText("");
                 Symbol.setText("");
+                break;
+            case R.id.nextpage:
+                Intent intent = new Intent(this,MainActivity2.class);
+                startActivity(intent);
                 break;
         }
     }

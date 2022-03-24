@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context=".MainActivity2">
 
     <TextView
         android:id="@+id/FirstNumber"
@@ -163,7 +163,7 @@
                 android:textSize="17pt"/>
 
             <android.widget.Button
-                android:id="@+id/plus"
+                android:id="@+id/sinus"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
@@ -172,7 +172,7 @@
                 android:insetTop="0dp"
                 android:insetBottom="0dp"
                 android:textColor="@color/yellow_orange"
-                android:text="+"
+                android:text="sin"
                 android:textSize="17pt"/>
 
         </TableRow>
@@ -219,7 +219,7 @@
                 android:textSize="17pt"/>
 
             <android.widget.Button
-                android:id="@+id/minus"
+                android:id="@+id/cosinus"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
@@ -228,7 +228,7 @@
                 android:textColor="@color/yellow_orange"
                 android:insetTop="0dp"
                 android:insetBottom="0dp"
-                android:text="-"
+                android:text="cos"
                 android:textSize="17pt"/>
 
         </TableRow>
@@ -262,7 +262,7 @@
                 android:textSize="17pt"/>
 
             <android.widget.Button
-                android:id="@+id/multiply"
+                android:id="@+id/degree"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
@@ -271,11 +271,11 @@
                 android:insetTop="0dp"
                 android:insetBottom="0dp"
                 android:textColor="@color/yellow_orange"
-                android:text="*"
+                android:text="^"
                 android:textSize="17pt"/>
 
             <android.widget.Button
-                android:id="@+id/divide"
+                android:id="@+id/root"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
@@ -284,24 +284,25 @@
                 android:insetTop="0dp"
                 android:insetBottom="0dp"
                 android:textColor="@color/yellow_orange"
-                android:text="/"
+                android:text="√"
                 android:textSize="17pt"/>
 
         </TableRow>
         <TableRow>
 
-        <android.widget.Button
-            android:id="@+id/nextpage"
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:background="@drawable/btw_draw"
-            android:backgroundTintMode="add"
-            android:insetTop="0dp"
-            android:insetBottom="0dp"
-            android:textColor="@color/yellow_orange"
-            android:text="Next page"
-            android:textSize="14pt"/>
+            <android.widget.Button
+                android:id="@+id/backpage"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/btw_draw"
+                android:backgroundTintMode="add"
+                android:insetTop="0dp"
+                android:insetBottom="0dp"
+                android:textColor="@color/yellow_orange"
+                android:text="Back page"
+                android:textSize="14pt"/>
+
         </TableRow>
     </TableLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
