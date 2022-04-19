@@ -5,8 +5,12 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.ArrayAdapter;
 import android.widget.Button;
+import android.widget.Spinner;
 import android.widget.TextView;
+
+import java.util.Arrays;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
 
@@ -34,7 +38,11 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     Button clear;
     Button next;
 
+    Spinner spin;
+
     String act;
+    String[] mas = new String[0];
+    ArrayAdapter<String> adap;
     boolean fnum;
     int ident;
 
@@ -69,6 +77,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         minus = findViewById(R.id.minus);
         clear = findViewById(R.id.clear);
         next = findViewById(R.id.nextpage);
+
+        spin = findViewById(R.id.spin);
 
         zero.setOnClickListener(this);
         one.setOnClickListener(this);
@@ -171,6 +181,17 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                         break;
                 }
                 fnum = !fnum;
+                mas = Arrays.copyOf(mas,mas.length +1);
+                String temp;
+                for (int i = mas.length - 1; i>=1; i--)
+                {
+                    temp = mas[i - 1];
+                    mas[i - 1] = mas[i];
+                    mas[i] = temp;
+                }
+                mas[0] = String.valueOf(result.getText());
+                adap = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item,mas);
+                spin.setAdapter(adap);
                 break;
             case R.id.clear:
                 FirstNumber.setText("");
